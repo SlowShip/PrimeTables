@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using PrimeTables.Web.Services.Number;
+using PrimeTables.Web.UnitTests.Const;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -66,6 +67,19 @@ namespace PrimeTables.Web.UnitTests.Services
 
                 // Assert
                 CollectionAssert.AreEqual(new int[] { 2, 3, 5, 7, 11 }, result);
+            }
+
+            [Test]
+            public void CreateSequence_WhenLengthIs1000_ShouldReturnTheFirst1000Primes()
+            {
+                // Arrange
+                var subject = new PrimesSequenceGenerator();
+
+                // Act
+                var result = subject.CreateSequence(1000);
+
+                // Assert
+                CollectionAssert.AreEqual(Primes.FirstThousand, result);
             }
         }
     }
