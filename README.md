@@ -22,6 +22,8 @@ Alternatively you can find a deployed version [here](http://prime-tables.azurewe
 * I would like to expose the view models through an Api, then implement a client app using JavaScript that doesn't load the larger values off the page until the user tries to view them which I think would have been a much better experience.    
 * The app could really easily be converted to return multiplication tables of different sequences, all you need to do is pass a parameter to the controller action and get it to pass it along to the factory. I would like to have a play around with this and see what I can make it do.
 * I've hacked the DI a little in `MultiplicationTableViewModelFactoryInstaller`. I would have liked to clear this up.
+* The site is pretty slow. This is not the fault of the calculations, these happen really quickly. Its actually somewhere between view generation and transmision (possibly bootstrap clientside). I would like to look into this. 
+* `OptimisedPrimesSequenceGenerator` needs more unit tests for edge cases
 ## Work
 
 ### Tasks:
@@ -43,5 +45,7 @@ Alternatively you can find a deployed version [here](http://prime-tables.azurewe
 * ~~**Implement Multiplication of sequence + plugin**~~
 * ~~**Implement PrimeNumberSequenceGenerator + plugin**~~
 * ~~**Update Readme.md**~~
-* **Look into optimising**
-  * `n*m == m*n` so only generate half the table
+* ~~**Look into optimising**~~
+  * ~~`n*m == m*n` so only generate half the table~~
+  * ~~Optimise prime generation~~
+  * Try turning off bootstrap for large tables

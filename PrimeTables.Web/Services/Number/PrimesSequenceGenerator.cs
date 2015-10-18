@@ -5,6 +5,7 @@ using System.Web;
 
 namespace PrimeTables.Web.Services.Number
 {
+    // Basic implementation
     public class PrimesSequenceGenerator : ISequenceGenerator
     {
         public IEnumerable<int> CreateSequence(int length)
@@ -24,6 +25,7 @@ namespace PrimeTables.Web.Services.Number
             
             while(foundPrimes.Count() < length)
             {
+                // Only need to compare to known primes (see Fundamental theorem of arithmetic)
                if(!DivisorExists(candidate, foundPrimes))
                {
                    foundPrimes.Add(candidate);

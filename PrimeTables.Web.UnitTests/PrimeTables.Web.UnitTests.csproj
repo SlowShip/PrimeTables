@@ -111,6 +111,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Const\Primes.cs" />
     <Compile Include="LocalAddin.cs" />
     <Compile Include="ModelProviders\Number\MultiplicationTableViewModelFactory.TestFixture.cs" />
     <Compile Include="ModelValidators\TableRequestBindingModelValidator.TestFixture.cs" />
@@ -118,6 +119,7 @@
     <Compile Include="Controllers\HomeController.TestFixture.cs" />
     <Compile Include="Services\MultiplicationTableCalculator.TestFixture.cs" />
     <Compile Include="Services\NaturalsSequenceGenerator.TestFixture.cs" />
+    <Compile Include="Services\OptimisedPrimesSequenceGenerator.TestFixture.cs" />
     <Compile Include="Services\PrimesSequenceGeneratorTestFixture.cs" />
     <Compile Include="Setup\Autofixture\Customizations\MvcControllerCustomization.cs" />
   </ItemGroup>

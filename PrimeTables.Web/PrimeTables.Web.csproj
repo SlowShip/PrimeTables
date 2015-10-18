@@ -151,6 +151,7 @@
     <Compile Include="Services\Number\ISequenceGenerator.cs" />
     <Compile Include="ModelProviders\Number\SequenceType.cs" />
     <Compile Include="Services\Number\NaturalsSequenceGenerator.cs" />
+    <Compile Include="Services\Number\OptimisedPrimesSequenceGenerator.cs" />
     <Compile Include="Services\Number\PrimesSequenceGenerator.cs" />
     <Compile Include="Services\Number\MultiplicationTableCalculator.cs" />
   </ItemGroup>
