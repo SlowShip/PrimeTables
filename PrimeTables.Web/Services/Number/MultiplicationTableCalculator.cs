@@ -33,8 +33,16 @@ namespace PrimeTables.Web.Services.Number
             {
                 for (int row = 1; row <= tableSize; row++)
                 {
-                    var val = result[0, col] * result[row, 0];
-                    result[row, col] = val;
+                    if (col > row)
+                    {
+                        // We've already calculated this value as Multiplication Table are mirrored across the diagonal
+                        result[row, col] = result[col, row];
+                    }
+                    else
+                    {
+                        var val = result[0, col] * result[row, 0];
+                        result[row, col] = val;
+                    }
                 }
             }
 
