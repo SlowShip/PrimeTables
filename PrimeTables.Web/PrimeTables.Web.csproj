@@ -141,7 +141,6 @@
     <Compile Include="ModelProviders\Number\IMultiplicationTableViewModelFactory.cs" />
     <Compile Include="ModelProviders\Number\MultiplicationTableViewModelFactory.cs" />
     <Compile Include="App_Start\Installers\MultiplicationTableViewModelFactoryInstaller.cs" />
-    <Compile Include="ModelProviders\Number\TestMultiplicationTableViewModelFactory.cs" />
     <Compile Include="Models\MultiplicationTableViewModel.cs" />
     <Compile Include="Models\TableRequestBindingModel.cs" />
     <Compile Include="ModelValidators\TableRequestBindingModelValidator.cs" />
@@ -151,6 +150,8 @@
     <Compile Include="Services\Number\IMultiplicationTableCalculator.cs" />
     <Compile Include="Services\Number\ISequenceGenerator.cs" />
     <Compile Include="ModelProviders\Number\SequenceType.cs" />
+    <Compile Include="Services\Number\NaturalsSequenceGenerator.cs" />
+    <Compile Include="Services\Number\TestMultiplicationTableCalculator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
