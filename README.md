@@ -20,10 +20,10 @@ I'm assuming the 10 is a typo and should read ***n* prime numbers**
 ### Tasks:
 
 * ~~**Repository set-up + initial commit**~~
-* **Create site + basic structure**
-  * Basic Asp.Net app
-  * Folders for unit tests
-  * Dependency Injection framework 
+* ~~**Create site + basic structure**~~
+  * ~~Basic Asp.Net app~~
+  * ~~Folders for unit tests~~
+  * ~~Dependency Injection framework~~
 * **Create basic interfaces for task**  
   * IPrimeMultiplicationTableViewModelFactory (Generate ViewModel)   
   * IMultiplicationTableCalculator (generate int[][] from ISequenceGenerator)   
