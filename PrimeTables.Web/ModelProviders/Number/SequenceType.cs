@@ -7,5 +7,6 @@ namespace PrimeTables.Web.ModelProviders.Number
 {
     public enum SequenceType
     {
+        Primes
     }
 }

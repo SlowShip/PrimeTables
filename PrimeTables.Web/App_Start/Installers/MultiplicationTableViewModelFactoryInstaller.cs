@@ -13,7 +13,7 @@ namespace PrimeTables.Web.App_Start.Installers
     {
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
-            container.Register(Component.For<IMultiplicationTableViewModelFactory>().ImplementedBy<MultiplicationTableViewModelFactory>());
+            container.Register(Component.For<IMultiplicationTableViewModelFactory>().ImplementedBy<TestMultiplicationTableViewModelFactory>());
         }
     }
 }

@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
 namespace PrimeTables.Web.Models
 {
-    public class MultiplicationTableViewModel
+    public class TableRequestBindingModel
     {
-        public int? TableSize { get; set; }
-        public int[,] Table { get; set; }
+        public int TableSize { get; set; }
     }
 }

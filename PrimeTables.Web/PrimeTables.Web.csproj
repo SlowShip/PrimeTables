@@ -135,7 +135,9 @@
     <Compile Include="ModelProviders\Number\IMultiplicationTableViewModelFactory.cs" />
     <Compile Include="ModelProviders\Number\MultiplicationTableViewModelFactory.cs" />
     <Compile Include="App_Start\Installers\MultiplicationTableViewModelFactoryInstaller.cs" />
+    <Compile Include="ModelProviders\Number\TestMultiplicationTableViewModelFactory.cs" />
     <Compile Include="Models\MultiplicationTableViewModel.cs" />
+    <Compile Include="Models\TableRequestBindingModel.cs" />
     <Compile Include="Plumbing\RouteNames.cs" />
     <Compile Include="Plumbing\WindsorControllerFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
