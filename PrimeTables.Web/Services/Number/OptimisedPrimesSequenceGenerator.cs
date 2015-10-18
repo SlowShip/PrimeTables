@@ -5,10 +5,6 @@ using System.Web;
 
 namespace PrimeTables.Web.Services.Number
 {
-    // Uses prime number theorem to create an upper bound of nth prime (see https://en.wikipedia.org/wiki/Prime_number_theorem#Approximations_for_the_nth_prime_number)
-    // Then 
-    // Sieve of Eratosthenes to find all primes less than n (see https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes#Algorithm_and_variants)
-    // complexity O(n log(log(n)))
     public class OptimisedPrimesSequenceGenerator : ISequenceGenerator
     {
         public IEnumerable<int> CreateSequence(int length)
@@ -24,12 +20,26 @@ namespace PrimeTables.Web.Services.Number
             }
 
             var upperBound = GetUpperLimitOfPrime(length);
-
             var roundedUpUpperBound = (int)Math.Ceiling(upperBound);
 
             return Sieve(roundedUpUpperBound).Take(length);
         }
 
+        // Uses prime number theorem to create an upper bound of nth prime (see https://en.wikipedia.org/wiki/Prime_number_theorem#Approximations_for_the_nth_prime_number)
+        private double GetUpperLimitOfPrime(int n)
+        {
+            if (n < 6)
+            {
+                return 12;
+            }
+            else
+            {
+                return n * (Math.Log(n) + Math.Log(Math.Log(n)));
+            }
+        }
+
+        // Sieve of Eratosthenes to find all primes less than n (see https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes#Algorithm_and_variants)
+        // complexity O(n log(log(n)))
         private IEnumerable<int> Sieve(int limit)
         {
             var possibleValues = Enumerable.Repeat(true, limit + 1).ToArray(); // +1 as arrays start at 0
@@ -51,18 +61,6 @@ namespace PrimeTables.Web.Services.Number
                 .Select((value, index) => new { value, index })
                 .Where(x => x.value)
                 .Select(x => x.index);
-        }
-
-        private double GetUpperLimitOfPrime(int n)
-        {
-            if(n < 6)
-            {
-                return 12;
-            }
-            else
-            {
-                return n * (Math.Log(n) + Math.Log(Math.Log(n)));
-            }
         }
     }
 }
