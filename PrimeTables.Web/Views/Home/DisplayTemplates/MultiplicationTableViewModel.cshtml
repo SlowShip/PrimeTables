@@ -1,0 +1,30 @@
+﻿@model PrimeTables.Web.Models.MultiplicationTableViewModel
+
+@if(Model.TableSize > 0)
+{ 
+    <div>
+        <table class="table table-bordered table-condensed table-striped">
+            <thead>
+                <tr>
+                    <th></th>
+                    @for (int col = 1; col <= Model.TableSize; col++)
+                    {
+                        <th>@Model.Table[0, col]</th>
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @for (int row = 1; row <= Model.TableSize; row++)
+                {
+                    <tr>
+                        <th>@Model.Table[row, 0]</th>
+                        @for (int col = 1; col <= Model.TableSize; col++)
+                        {
+                            <td>@Model.Table[row, col]</td>
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}

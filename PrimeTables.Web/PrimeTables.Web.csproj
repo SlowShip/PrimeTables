@@ -142,7 +142,6 @@
     <Compile Include="Services\Number\IMultiplicationTableCalculator.cs" />
     <Compile Include="Services\Number\ISequenceGenerator.cs" />
     <Compile Include="ModelProviders\Number\SequenceType.cs" />
-    <Compile Include="Services\Test\TestService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -178,6 +177,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Home\DisplayTemplates\MultiplicationTableViewModel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

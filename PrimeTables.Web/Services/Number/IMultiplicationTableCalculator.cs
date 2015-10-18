@@ -7,6 +7,6 @@ namespace PrimeTables.Web.Services.Number
 {
     public interface IMultiplicationTableCalculator
     {
-        int[][] CreateTable(IEnumerable<int> factors);
+        int[,] CreateTable(IEnumerable<int> factors);
     }
 }
