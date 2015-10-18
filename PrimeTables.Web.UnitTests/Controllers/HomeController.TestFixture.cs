@@ -25,17 +25,21 @@ namespace PrimeTables.Web.UnitTests.Controllers
                 .Customize(new MvcControllerCustomization());
         }
 
-        [Test]
-        public void Index_ShouldReturnAViewResult()
+        [TestFixture]
+        public class IndexTestFixture : HomeControllerTestFixture
         {
-            // Arrange
-            var subject = fixture.Create<HomeController>();
+            [Test]
+            public void Index_ShouldReturnAViewResult()
+            {
+                // Arrange
+                var subject = fixture.Create<HomeController>();
 
-            // Act
-            var result = subject.Index() as ViewResult;
+                // Act
+                var result = subject.Index() as ViewResult;
 
-            // Assert
-            Assert.IsNotNull(result);
+                // Assert
+                Assert.IsNotNull(result);
+            }
         }
     }
 }

@@ -24,10 +24,10 @@ I'm assuming the 10 is a typo and should read ***n* prime numbers**
   * ~~Basic Asp.Net app~~
   * ~~Folders for unit tests~~
   * ~~Dependency Injection framework~~
-* **Create basic interfaces for task**  
-  * IPrimeMultiplicationTableViewModelFactory (Generate ViewModel)   
-  * IMultiplicationTableCalculator (generate int[][] from ISequenceGenerator)   
-  * ISequenceGenerator (Have something like GetNext() )
+* ~~**Create basic interfaces for task**~~  
+  * ~~IPrimeMultiplicationTableViewModelFactory~~ (Decided upon a more generic MultiplicationTableViewModelFactory)   
+  * ~~IMultiplicationTableCalculator~~   
+  * ~~ISequenceGenerator~~ (Decided upon a more generic CreateSequence(int length) as get next felt to tied to assumed prime generation implementation)
 * **Create page wire frame**
 * **Take input from user**
 * **Display table of specified size** (handle large tables)

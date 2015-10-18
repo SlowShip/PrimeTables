@@ -132,9 +132,16 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Installers\ControllersInstaller.cs" />
+    <Compile Include="ModelProviders\Number\IMultiplicationTableViewModelFactory.cs" />
+    <Compile Include="ModelProviders\Number\MultiplicationTableViewModelFactory.cs" />
+    <Compile Include="App_Start\Installers\MultiplicationTableViewModelFactoryInstaller.cs" />
+    <Compile Include="Models\MultiplicationTableViewModel.cs" />
     <Compile Include="Plumbing\RouteNames.cs" />
     <Compile Include="Plumbing\WindsorControllerFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Number\IMultiplicationTableCalculator.cs" />
+    <Compile Include="Services\Number\ISequenceGenerator.cs" />
+    <Compile Include="ModelProviders\Number\SequenceType.cs" />
     <Compile Include="Services\Test\TestService.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -174,7 +181,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
