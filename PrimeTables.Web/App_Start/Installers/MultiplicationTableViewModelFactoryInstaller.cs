@@ -23,7 +23,7 @@ namespace PrimeTables.Web.App_Start.Installers
                 {
                     /*Todo resolve from container*/
                     { SequenceType.Naturals, new NaturalsSequenceGenerator() },
-                    { SequenceType.Primes, new NaturalsSequenceGenerator() /*Todo*/ }
+                    { SequenceType.Primes, new PrimesSequenceGenerator() }
                 })));
         }
     }

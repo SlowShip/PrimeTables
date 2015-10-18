@@ -17,6 +17,7 @@ namespace PrimeTables.Web.Services.Number
             var factorsArray = factors.ToArray();
             var tableSize = factors.Count();
 
+            // Size is +1 because first row and column are take up with the factors
             var result = new int[tableSize + 1, tableSize + 1];
             
             // Initalise top row and first column
