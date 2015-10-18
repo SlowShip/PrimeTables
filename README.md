@@ -24,6 +24,9 @@ Alternatively you can find a deployed version [here](http://prime-tables.azurewe
 * I've hacked the DI a little in `MultiplicationTableViewModelFactoryInstaller`. I would have liked to clear this up.
 * The site is pretty slow. This is not the fault of the calculations, these happen really quickly. Its actually somewhere between view generation and transmision (possibly bootstrap clientside). I would like to look into this. 
 * `OptimisedPrimesSequenceGenerator` needs more unit tests for edge cases
+* Use Web Api rather than MVC controllers for spitting out Json results (didn't want all the hassle involved in setting with webapi, inital config, making DI work, e.t.c so skipped it)
+* Investigate different data structures to hold results (right now the 2d array appears to be throwing out of memory exceptions around the n = 1000 mark on my local)
+
 ## Work
 
 ### Tasks:

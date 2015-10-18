@@ -85,7 +85,7 @@ namespace PrimeTables.Web.UnitTests.ModelValidators
             // Arrange
             var model = new TableRequestBindingModel()
             {
-                TableSize = 499
+                TableSize = 500
             };
             var subject = new TableRequestBindingModelValidator();
 
