@@ -1,6 +1,6 @@
 ﻿@model PrimeTables.Web.Models.MultiplicationTableViewModel
 
-@if (Model.TableSize.HasValue && Model.TableSize > 0)
+@if (Model.Table != null && Model.TableSize > 0)
 { 
     <div>
         <table class="table table-bordered table-condensed table-striped">

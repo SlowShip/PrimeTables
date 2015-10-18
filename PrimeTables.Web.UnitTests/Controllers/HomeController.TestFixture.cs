@@ -81,6 +81,53 @@ namespace PrimeTables.Web.UnitTests.Controllers
                 viewModelFactory.Verify(fact => fact.Create(It.IsAny<SequenceType>(), It.IsAny<int>()), Times.Never());
             }
 
+            [Test]
+            public void Index_WhenTheModelStateIsInvalid_ReturnsAViewModelResult()
+            {
+                // Arrange
+                var req = new TableRequestBindingModel() { TableSize = fixture.Create<int>() };
+                var subject = fixture.Create<HomeController>();
+                subject.ModelState.AddModelError(fixture.Create<string>(), fixture.Create<string>());
+
+                // Act
+                var result = subject.Index(req) as ViewResult;
+
+                // Assert
+                Assert.IsNotNull(result);
+            }
+
+            [Test]
+            public void Index_WhenTheModelStateIsInvalid_ReturnsAViewModelWithTheCorrectTableSize()
+            {
+                // Arrange
+                var req = new TableRequestBindingModel() { TableSize = fixture.Create<int>() };
+                var subject = fixture.Create<HomeController>();
+                subject.ModelState.AddModelError(fixture.Create<string>(), fixture.Create<string>());
+
+                // Act
+                var result = subject.Index(req) as ViewResult;
+
+                // Assert
+                var model = result.Model as MultiplicationTableViewModel;
+                Assert.NotNull(model);
+                Assert.That(model.TableSize, Is.EqualTo(req.TableSize));
+            }
+
+            [Test]
+            public void Index_WhenTheModelStateIsInvalid_ShouldNotUseTheViewModelFactory()
+            {
+                // Arrange
+                var req = new TableRequestBindingModel() { TableSize = fixture.Create<int>() };
+                var subject = fixture.Create<HomeController>();
+                subject.ModelState.AddModelError(fixture.Create<string>(), fixture.Create<string>());
+
+                // Act
+                var result = subject.Index(req) as ViewResult;
+
+                // Assert
+                viewModelFactory.Verify(fact => fact.Create(It.IsAny<SequenceType>(), It.IsAny<int>()), Times.Never());
+            }
+
             [TestCase(0)]
             [TestCase(20)]
             public void Index_WithSpecifiedTableSize_ReturnAViewResult(int tableSize)

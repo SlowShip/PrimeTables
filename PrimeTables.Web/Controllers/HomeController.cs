@@ -23,16 +23,20 @@ namespace PrimeTables.Web.Controllers
         [Route("", Name = RouteNames.Home.Index)]
         public ActionResult Index(TableRequestBindingModel model = null)
         {
-            MultiplicationTableViewModel viewModel;
-            if(model == null || model.TableSize == 0)
+            if (model == null || model.TableSize == 0)
             {
-                viewModel = new MultiplicationTableViewModel();
-            }
-            else
-            {
-                viewModel = viewModelFactory.Create(SequenceType.Primes, model.TableSize);
+                return View(new MultiplicationTableViewModel());
             }
 
+            if (!ModelState.IsValid)
+            {
+                return View(new MultiplicationTableViewModel()
+                {
+                    TableSize = model.TableSize
+                });
+            }
+
+            var viewModel = viewModelFactory.Create(SequenceType.Primes, model.TableSize);
             return View(viewModel);
         }
     }
