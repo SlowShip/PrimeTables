@@ -116,6 +116,7 @@
     <Compile Include="ModelValidators\TableRequestBindingModelValidator.TestFixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeController.TestFixture.cs" />
+    <Compile Include="Services\MultiplicationTableCalculator.TestFixture.cs" />
     <Compile Include="Services\NaturalsSequenceGenerator.TestFixture.cs" />
     <Compile Include="Setup\Autofixture\Customizations\MvcControllerCustomization.cs" />
   </ItemGroup>

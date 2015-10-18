@@ -15,7 +15,7 @@ namespace PrimeTables.Web.App_Start.Installers
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
             container.Register(
-                Component.For<IMultiplicationTableCalculator>().ImplementedBy<TestMultiplicationTableCalculator>(),
+                Component.For<IMultiplicationTableCalculator>().ImplementedBy<MultiplicationTableCalculator>(),
 
                 Component.For<IMultiplicationTableViewModelFactory>()
                 .ImplementedBy<MultiplicationTableViewModelFactory>()
