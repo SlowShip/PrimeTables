@@ -34,7 +34,7 @@ I'm assuming the 10 is a typo and should read ***n* prime numbers**
 * ~~**Display table of specified size** (handle large tables)~~
   * ~~Create TestMultiplicationTableCalculator and just returns 0's in an int[][]~~
   * ~~Bear in mind tables could be *very* large~~
-* **Implement Multiplication of sequence + plugin**
+* ~~**Implement Multiplication of sequence + plugin**~~
 * **Implement PrimeNumberSequenceGenerator + plugin**
 * **Update Readme.md**
 * **Look into optimising**
